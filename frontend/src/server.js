@@ -1,2 +1,2 @@
-export const server = 'https://wedesignetees-n6ua.onrender.com/api/v2'
-export const backend_url = "https://wedesignetees-n6ua.onrender.com/";
+export const server = 'https://we-designe-tees-backend.vercel.app/api/v2'
+export const backend_url = "https://we-designe-tees-backend.vercel.app/";
