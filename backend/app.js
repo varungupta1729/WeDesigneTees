@@ -12,8 +12,8 @@ dotenv.config();
 
 app.use(cors({
   origin : 'https://we-designe-tees.vercel.app/',
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
+  
+  
  
 }));
 
