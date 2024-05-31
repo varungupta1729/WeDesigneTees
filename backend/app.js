@@ -11,18 +11,26 @@ const path = require("path");
 dotenv.config();
 
 
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://we-designe-tees.vercel.app/")
-  next()
-})
+// app.use((req, res, next) => {
+//   res.header("Access-Control-Allow-Origin", "https://we-designe-tees.vercel.app/")
+//   next()
+// })
 
-app.use(
-  cors({
-    origin: ["https://we-designe-tees.vercel.app/"],
-    methods: "GET, POST, PATCH, DELETE, PUT",
-    credentials: true,
-  })
-)
+// app.use(
+//   cors({
+//     origin: ["https://we-designe-tees.vercel.app/"],
+//     methods: "GET, POST, PATCH, DELETE, PUT",
+//     credentials: true,
+//   })
+// )
+
+
+const corsOptions ={
+    origin:'https://we-designe-tees.vercel.app/', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
+}
+app.use(cors(corsOptions));
 
 // app.use(cors({
 //   origin: ['https://we-designe-tees.vercel.app/',],
