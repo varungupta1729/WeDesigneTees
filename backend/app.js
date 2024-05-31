@@ -13,6 +13,8 @@ dotenv.config();
 app.use(cors({
   origin: ['https://we-designe-tees.vercel.app/'],
   credentials: true,
+  allowedHeaders: ['Content-Type'],
+  exposedHeaders: ['Content-Type']
 }));
 // app.use(express.json());
 app.use(express.json({ limit: '1000000000mb' }));
