@@ -11,7 +11,7 @@ const path = require("path");
 dotenv.config();
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://we-designe-tees.vercel.app/',
   credentials: true
 }));
 // app.use(express.json());
