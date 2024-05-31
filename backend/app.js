@@ -10,11 +10,7 @@ const path = require("path");
 // const fileUpload = require('express-fileupload')
 dotenv.config();
 
-app.use(cors({
-  origin: '*',
-  credentials: false,
- 
-}));
+app.use(cors());
 
 // app.use(express.json());
 app.use(express.json({ limit: '1000000000mb' }));
