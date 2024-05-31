@@ -18,16 +18,16 @@ app.use((req, res, next) => {
 
 app.use(
   cors({
-    origin: ["https://we-designe-tees.vercel.app/", "https://we-designe-tees.vercel.app/"],
+    origin: ["https://we-designe-tees.vercel.app/"],
     methods: "GET, POST, PATCH, DELETE, PUT",
     credentials: true,
   })
 )
 
-app.use(cors({
-  origin: ['https://we-designe-tees.vercel.app/',],
-  credentials: true
-}));
+// app.use(cors({
+//   origin: ['https://we-designe-tees.vercel.app/',],
+//   credentials: true
+// }));
 
 
 // app.use(express.json());
