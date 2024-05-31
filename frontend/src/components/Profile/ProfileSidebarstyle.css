@@ -1,0 +1,57 @@
+
+
+.bg-card{
+  background-color:#171717;
+  
+}
+.bg-sidebar-card-top{
+  background-color: #353535;
+}
+.sidebar-separator-top{
+  border-bottom: 1px solid #2e2e2e;
+}
+.sidebar-separator-bottom{
+  border-top: 1px solid #2e2e2e;
+}
+.text-premium-yellow{
+  color: #f7b91c;
+}
+.icon-background{
+  background: #2d2d2d;
+}
+
+.tooltip-head{
+background: #1d1d1d;
+}
+.tooltip-body{
+  background:#252525 ;
+}
+
+.search-icon{
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.card-stack-border{
+  border-bottom: 2px solid #000000;
+}
+.bg-details{
+  background-color: #1e1e1e;
+}
+
+
+.sidebar-item-selected{
+  color: rgb(255, 255, 255);
+  background-color: #000000   ;
+  font-weight: 700;
+  border-right: 2px solid rgb(0, 0, 0);
+  border-radius: 1222222px
+}
+.sidebar-item{
+  border-right: 2px solid transparent;
+
+}
+.sidebar-item:hover {
+ font-weight: 700;
+ color:#050505;
+}

@@ -1,0 +1,310 @@
+
+/* Main Style ----------*/
+
+.group:after {
+  content: "";
+  display: table; 
+  clear: both;
+}
+
+/* Content Style ----------*/
+
+.ui.grid > .row > .column {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* .ui.centered.grid {
+    position: relative;
+    
+} */
+
+.proCard_content {
+    width: 70%;
+    
+    background-color: white;
+    box-shadow: 0px 0px 48px 0px rgba(38, 50, 56, 0.25);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+/* Product-Info Section ----------*/
+
+.proCard_info {
+    width: 60%;
+    height: 100%;
+    float: left;
+    background: white;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    text-align: left;
+    padding: 25px;
+}
+
+.proCard_text {
+    
+}
+
+/* Brand-Name & Price ----------*/
+
+.brand-name {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.brand-name h3 {
+    float: left;
+    text-transform: uppercase;
+}
+
+.proCard_price {
+    font-size: 2rem;
+    float: left;
+    color: #37474F;
+    font-weight: bold;
+}
+
+/* Description ----------*/
+
+.proCard_description {
+    margin-bottom: 20px;
+}
+
+.proCard_description h4 {
+    margin-bottom: 8px;
+}
+
+.proCard_description p {
+    text-indent: 2rem;
+}
+
+/* Colors ----------*/
+
+.proCard_colors {
+    margin-bottom: 20px;
+}
+
+.proCard_colors h4 {
+    margin-bottom: 8px;
+}
+
+.proCard_colors ul {
+    list-style: none;
+}
+
+.proCard_colors li {
+    border-radius: 25%;
+    display: inline-block;
+    padding: 2px;
+}
+
+.proCard_colors li:first-of-type span {
+    background: #2C87CE;
+}
+
+.proCard_colors li:nth-child(2) span {
+    background: #CA3E3D;
+}
+
+.proCard_colors li:last-of-type span {
+    background: #fff;
+}
+
+.proCard_colors .proCard_select {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0), 0px 0px 5px 0px #546E7A;
+}
+
+.proCard_colors li span {
+    width: 25px;
+    height: 25px;
+    border-radius: 25%;
+    background: black;
+    display: block;
+    cursor: pointer;
+}
+
+/* Size & Quantity ----------*/
+
+.size-quantity {
+    margin-bottom: 20px;
+}
+
+.proCard_size {
+    width: 50%;
+    float: left;
+}
+
+.proCard_size h4 {
+    margin-bottom: 8px;
+}
+
+.proCard_size ul {
+    list-style: none;
+}
+
+.proCard_size li {
+    border-radius: 25%;
+    display: inline-block;
+    padding: 2px;
+    border: 1px solid transparent;
+}
+
+.proCard_size .proCard_active {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0), 0px 0px 5px 0px #546E7A;
+}
+
+.proCard_size li span {
+    width: 25px;
+    height: 25px;
+    border-radius: 25%;
+    background: transparent;
+    display: block;
+    font-weight: bold;
+    line-height: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.proCard_quantity {
+    width: 50%;
+    float: right    ;
+    text-align: center;
+}
+
+.proCard_quantity form label {
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.proCard_quantity form input[type="text"] {
+    width: 30px;
+    height: 30px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border: 0;
+    border-radius: 25%;
+    box-shadow: 0px 0px 5px 0px #546E7A;
+    text-align: center;
+    outline: 0;
+}
+
+.proCard_quantity form button {
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+.proCard_quantity form .plus {
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.proCard_quantity form .minus {
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/* Buttons ----------*/
+
+.proCard_buttons {
+    height: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+.ui.button {
+    float: left;
+    padding: 19px 40px;
+    border-radius: 10px;
+    background: #E91E63 !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+    color: #FFF !important;
+    transition: .5s;
+}
+
+.ui.button:hover {
+    background: rgba(233, 30, 99, 0.7) !important;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0);
+    color: #FFF;
+}
+
+
+.go-back {
+    position: absolute;
+    
+    left: 0px;
+    top: 0px;
+    color:#222;
+    width: 0;
+    height: 0;
+    border-top: 80px solid #000000;
+    border-right: 80px solid transparent;
+  }
+  
+  .arrow {
+    
+    position: relative;
+    top: -70px;
+    left: 11px;
+  }
+/* Images Section ----------*/
+
+.proCard_images-section {
+    width: 40%;
+    
+    float: right;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+}
+
+/* Slider ----------*/
+
+.proCard_slider .slick-list {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.proCard_slider img {
+    width: 100%;
+    height: 400px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.proCard_slider ul {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+}
+
+.proCard_slider ul li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #0365B2;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.slick-dots .slick-active {
+    border: 1px solid #333;
+    transform: scale(1.5);
+    transition: .5s;
+    opacity: 1;
+}
+
+.proCard_slider li button {
+    display: none;
+}
+
