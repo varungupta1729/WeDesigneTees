@@ -3,7 +3,7 @@ import './Chatting.css'
 import { useSelector } from 'react-redux'
 import { backend_url, server } from '../../../server';
 import { useNavigate } from "react-router-dom";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import { AiOutlineArrowRight } from "react-icons/ai";
 import { TfiGallery } from "react-icons/tfi";
 import socketIO from "socket.io-client";
 import { format } from "timeago.js";
@@ -22,7 +22,6 @@ const [userData, setUserData] = useState(null);
 const [newMessage, setNewMessage] = useState("");
 const [onlineUsers, setOnlineUsers] = useState([]);
 const [activeStatus, setActiveStatus] = useState(false);
-const [active1, setActive1] = useState(true);
 const [images, setImages] = useState();
 const [open, setOpen] = useState(false);
 const scrollRef = useRef(null);
@@ -219,10 +218,10 @@ useEffect(() => {
 
   return (
       <div id='chatting-page'>
-        <div className="app-container">
+        <div className="app-container overflow-x-auto">
 
       
-        <div className= {`app-left${active1?"-hidden":" "}`}>
+    <div className="app-left">
 
     
 <div className="app-left-header">
@@ -313,7 +312,6 @@ useEffect(() => {
           userData={userData}
           online={onlineCheck(item)}
           setActiveStatus={setActiveStatus}
-          setActive1={setActive1}
         />
       ))}
  
@@ -341,8 +339,6 @@ useEffect(() => {
           scrollRef={scrollRef}
           setMessages={setMessages}
           handleImageUpload={handleImageUpload}
-          active1={active1}
-          setActive1={setActive1}
         />
     {/* right*/}
 
@@ -439,7 +435,6 @@ const MessageList = ({
   setUserData,
   online,
   setActiveStatus,
-  setActive1
 }) => {
  
   const [user, setUser] = useState([]);
@@ -508,8 +503,7 @@ const MessageList = ({
         handleClick(data?._id) ||
         setCurrentChat(data) ||
         setUserData(user) ||
-        setActiveStatus(online) ||
-        setActive1(true)
+        setActiveStatus(online)
     }>
     <img
          src={`${user?.avatar}`}  alt="chat"
@@ -545,17 +539,10 @@ const SellerInbox = ({
   userData,
   activeStatus,
   handleImageUpload,
-  active1,
-  setActive1,
 }) => {
   return (
     <>
    <div className="app-main">
-   <div onClick={()=>setActive1(!active1)} className="sm:hidden bg-black text-white w-[30px] h-[30px] rounded-full p-1 flex justify-center items-center">
-      {
-        active1 ? (<AiOutlineArrowLeft size={24}/>) : (<AiOutlineArrowRight size={24}/>)
-      }
-    </div>
       <div className="chat-wrapper">
 
       {messages &&

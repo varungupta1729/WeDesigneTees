@@ -3,7 +3,7 @@ import "./Chatting.css";
 import { useSelector } from "react-redux";
 import { backend_url, server } from "../../../server";
 import { Link, useNavigate } from "react-router-dom";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import { AiOutlineArrowRight } from "react-icons/ai";
 import { TfiGallery } from "react-icons/tfi";
 import socketIO from "socket.io-client";
 import { format } from "timeago.js";
@@ -26,7 +26,6 @@ const UserInbox = () => {
   const [onlineUsers, setOnlineUsers] = useState([]);
   const [images, setImages] = useState();
   const [activeStatus, setActiveStatus] = useState(false);
-  const [active1, setActive1] = useState(true);
   const [open, setOpen] = useState(false);
   const scrollRef = useRef(null);
   const [conversationLength, setConversationLength] = useState(0);
@@ -217,9 +216,8 @@ const UserInbox = () => {
   }, [messages]);
   return (
     <div id="chatting-page">
-      <div className="app-container">
-      
-        <div className= {`app-left${active1?"-hidden":" "}`}>
+      <div className="app-container overflow-x-auto">
+        <div className="app-left">
           <div className="app-left-header">
             <div className="app-logo">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -288,7 +286,6 @@ const UserInbox = () => {
                     userData={userData}
                     online={onlineCheck(item)}
                     setActiveStatus={setActiveStatus}
-                    setActive1={setActive1}
                   />
                 ))}
             </ul>
@@ -308,8 +305,6 @@ const UserInbox = () => {
           activeStatus={activeStatus}
           scrollRef={scrollRef}
           handleImageUpload={handleImageUpload}
-          active1={active1}
-          setActive1={setActive1}
         />
 
         {/* right*/}
@@ -402,7 +397,6 @@ const MessageList = ({
   userData,
   online,
   setActiveStatus,
-  setActive1
 }) => {
   const [active, setActive] = useState(0);
   const [user, setUser] = useState([]);
@@ -435,8 +429,7 @@ const MessageList = ({
         handleClick(data?._id) ||
         setCurrentChat(data) ||
         setUserData(user) ||
-        setActiveStatus(online) ||
-        setActive1(true)
+        setActiveStatus(online)
       }
     >
       <img src={`${user?.avatar?.url}`} alt="chat" />
@@ -470,19 +463,11 @@ const SellerInbox = ({
   activeStatus,
   scrollRef,
   handleImageUpload,
-  active1,
-  setActive1,
 }) => {
  
   return (
     <>
-    
       <div className="app-main">
-      <div onClick={()=>setActive1(!active1)} className="sm:hidden bg-black text-white w-[30px] h-[30px] rounded-full p-1 flex justify-center items-center">
-      {
-        active1 ? (<AiOutlineArrowLeft size={24}/>) : (<AiOutlineArrowRight size={24}/>)
-      }
-    </div>
         <div className="chat-wrapper">
           {messages &&
             messages.map((item, index) => (
