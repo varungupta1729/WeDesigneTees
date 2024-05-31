@@ -725,7 +725,7 @@
 
 @media screen and (max-width: 1025px) {
   .app-right {
-    transform: translateX(-100%);
+    transform: translateX(100%);
     position: absolute;
     opacity: 0;
     top: 0;
@@ -744,8 +744,8 @@
   }
 }
 @media screen and (max-width: 680px) {
-  .app-left {
-    transform: translateX(100%);
+  .app-left-hidden {
+    transform: translateX(-100%);
     position: absolute;
     opacity: 0;
     top: 0;
@@ -769,6 +769,6 @@
   }
 
   .app-main {
-    height: calc(100% - 48px);
+    height: 100%;
   }
 }

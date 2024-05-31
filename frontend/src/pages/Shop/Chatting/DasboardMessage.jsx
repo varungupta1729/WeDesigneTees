@@ -3,7 +3,7 @@ import './Chatting.css'
 import { useSelector } from 'react-redux'
 import { backend_url, server } from '../../../server';
 import { useNavigate } from "react-router-dom";
-import { AiOutlineArrowRight } from "react-icons/ai";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { TfiGallery } from "react-icons/tfi";
 import socketIO from "socket.io-client";
 import { format } from "timeago.js";
@@ -22,6 +22,7 @@ const [userData, setUserData] = useState(null);
 const [newMessage, setNewMessage] = useState("");
 const [onlineUsers, setOnlineUsers] = useState([]);
 const [activeStatus, setActiveStatus] = useState(false);
+const [active, setActive] = useState(true);
 const [images, setImages] = useState();
 const [open, setOpen] = useState(false);
 const scrollRef = useRef(null);
@@ -339,6 +340,8 @@ useEffect(() => {
           scrollRef={scrollRef}
           setMessages={setMessages}
           handleImageUpload={handleImageUpload}
+          active={active}
+          setActive={setActive}
         />
     {/* right*/}
 
@@ -539,10 +542,17 @@ const SellerInbox = ({
   userData,
   activeStatus,
   handleImageUpload,
+  active,
+  setActive,
 }) => {
   return (
     <>
    <div className="app-main">
+   <div onClick={()=>setActive(!active)} className=" bg-black text-white w-[30px] h-[30px] rounded-full p-1 flex justify-center items-center">
+      {
+        active ? (<AiOutlineArrowLeft size={24}/>) : (<AiOutlineArrowRight size={24}/>)
+      }
+    </div>
       <div className="chat-wrapper">
 
       {messages &&

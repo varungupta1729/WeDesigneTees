@@ -3,7 +3,7 @@ import "./Chatting.css";
 import { useSelector } from "react-redux";
 import { backend_url, server } from "../../../server";
 import { Link, useNavigate } from "react-router-dom";
-import { AiOutlineArrowRight } from "react-icons/ai";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { TfiGallery } from "react-icons/tfi";
 import socketIO from "socket.io-client";
 import { format } from "timeago.js";
@@ -26,6 +26,7 @@ const UserInbox = () => {
   const [onlineUsers, setOnlineUsers] = useState([]);
   const [images, setImages] = useState();
   const [activeStatus, setActiveStatus] = useState(false);
+  const [active, setActive] = useState(false);
   const [open, setOpen] = useState(false);
   const scrollRef = useRef(null);
   const [conversationLength, setConversationLength] = useState(0);
@@ -217,7 +218,8 @@ const UserInbox = () => {
   return (
     <div id="chatting-page">
       <div className="app-container">
-        <div className="app-left">
+      
+        <div className= {`app-left${active?"-hidden":" "}`}>
           <div className="app-left-header">
             <div className="app-logo">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -305,6 +307,8 @@ const UserInbox = () => {
           activeStatus={activeStatus}
           scrollRef={scrollRef}
           handleImageUpload={handleImageUpload}
+          active={active}
+          setActive={setActive}
         />
 
         {/* right*/}
@@ -463,11 +467,19 @@ const SellerInbox = ({
   activeStatus,
   scrollRef,
   handleImageUpload,
+  setActive,
+  active,
 }) => {
  
   return (
     <>
+    
       <div className="app-main">
+      <div onClick={()=>setActive(!active)} className=" bg-black text-white w-[30px] h-[30px] rounded-full p-1 flex justify-center items-center">
+      {
+        active ? (<AiOutlineArrowLeft size={24}/>) : (<AiOutlineArrowRight size={24}/>)
+      }
+    </div>
         <div className="chat-wrapper">
           {messages &&
             messages.map((item, index) => (
