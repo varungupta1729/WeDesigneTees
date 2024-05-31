@@ -11,7 +11,7 @@ const path = require("path");
 dotenv.config();
 
 app.use(cors({
-  origini : 'https://we-designe-tees.vercel.app/',
+  origin : 'https://we-designe-tees.vercel.app/',
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
  
