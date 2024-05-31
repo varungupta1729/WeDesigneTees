@@ -16,26 +16,14 @@ dotenv.config();
 //   next()
 // })
 
-// app.use(
-//   cors({
-//     origin: ["https://we-designe-tees.vercel.app/"],
-//     methods: "GET, POST, PATCH, DELETE, PUT",
-//     credentials: true,
-//   })
-// )
+app.use(
+  cors({
+    origin: 'https://we-designe-tees.vercel.app/',
+    methods: "GET, POST, PATCH, DELETE, PUT",
+    credentials: true,
+  })
+)
 
-
-const corsOptions ={
-    origin:['https://we-designe-tees.vercel.app/'], 
-    credentials:true,            //access-control-allow-credentials:true
-    optionSuccessStatus:200
-}
-app.use(cors(corsOptions));
-
-// app.use(cors({
-//   origin: ['https://we-designe-tees.vercel.app/',],
-//   credentials: true
-// }));
 
 
 // app.use(express.json());
