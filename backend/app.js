@@ -11,7 +11,8 @@ const path = require("path");
 dotenv.config();
 
 app.use(cors({
- 
+  origini : '*',
+  allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
  
 }));
