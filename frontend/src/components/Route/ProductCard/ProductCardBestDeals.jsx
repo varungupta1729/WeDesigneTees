@@ -77,13 +77,9 @@ const ProductCardBestDeals = ({ data, isEvent }) => {
             class="h-64 w-60 object-cover "
           />
         </Link>
-        <div className=" w-4 items-center justify-center  flex-col gap-3  absolute top-5 right-5 hidden group-hover:flex">
-       
-          
-          
-         
-
-          {click ? (
+        <div className="absolute top-0 left-0 bg-black text-white p-2 text-xs flex justify-center items-center rounded w-[90px] h-[20px]">Best Seller</div>
+        <div className=" w-4 items-center justify-center  flex-col gap-3  absolute top-5 right-5 hidden group-hover:flex">    
+           {click ? (
            
               <AiFillHeart
                 size={27}
