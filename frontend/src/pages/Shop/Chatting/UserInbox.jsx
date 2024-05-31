@@ -26,7 +26,7 @@ const UserInbox = () => {
   const [onlineUsers, setOnlineUsers] = useState([]);
   const [images, setImages] = useState();
   const [activeStatus, setActiveStatus] = useState(false);
-  const [active, setActive] = useState(false);
+  const [active1, setActive1] = useState(true);
   const [open, setOpen] = useState(false);
   const scrollRef = useRef(null);
   const [conversationLength, setConversationLength] = useState(0);
@@ -219,7 +219,7 @@ const UserInbox = () => {
     <div id="chatting-page">
       <div className="app-container">
       
-        <div className= {`app-left${active?"-hidden":" "}`}>
+        <div className= {`app-left${active1?"-hidden":" "}`}>
           <div className="app-left-header">
             <div className="app-logo">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -288,6 +288,7 @@ const UserInbox = () => {
                     userData={userData}
                     online={onlineCheck(item)}
                     setActiveStatus={setActiveStatus}
+                    setActive1={setActive1}
                   />
                 ))}
             </ul>
@@ -307,8 +308,8 @@ const UserInbox = () => {
           activeStatus={activeStatus}
           scrollRef={scrollRef}
           handleImageUpload={handleImageUpload}
-          active={active}
-          setActive={setActive}
+          active1={active1}
+          setActive1={setActive1}
         />
 
         {/* right*/}
@@ -401,6 +402,7 @@ const MessageList = ({
   userData,
   online,
   setActiveStatus,
+  setActive1
 }) => {
   const [active, setActive] = useState(0);
   const [user, setUser] = useState([]);
@@ -433,7 +435,8 @@ const MessageList = ({
         handleClick(data?._id) ||
         setCurrentChat(data) ||
         setUserData(user) ||
-        setActiveStatus(online)
+        setActiveStatus(online) ||
+        setActive1(true)
       }
     >
       <img src={`${user?.avatar?.url}`} alt="chat" />
@@ -467,17 +470,17 @@ const SellerInbox = ({
   activeStatus,
   scrollRef,
   handleImageUpload,
-  setActive,
-  active,
+  active1,
+  setActive1,
 }) => {
  
   return (
     <>
     
       <div className="app-main">
-      <div onClick={()=>setActive(!active)} className=" bg-black text-white w-[30px] h-[30px] rounded-full p-1 flex justify-center items-center">
+      <div onClick={()=>setActive1(!active1)} className="sm:hidden bg-black text-white w-[30px] h-[30px] rounded-full p-1 flex justify-center items-center">
       {
-        active ? (<AiOutlineArrowLeft size={24}/>) : (<AiOutlineArrowRight size={24}/>)
+        active1 ? (<AiOutlineArrowLeft size={24}/>) : (<AiOutlineArrowRight size={24}/>)
       }
     </div>
         <div className="chat-wrapper">

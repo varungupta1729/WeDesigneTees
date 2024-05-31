@@ -22,7 +22,7 @@ const [userData, setUserData] = useState(null);
 const [newMessage, setNewMessage] = useState("");
 const [onlineUsers, setOnlineUsers] = useState([]);
 const [activeStatus, setActiveStatus] = useState(false);
-const [active, setActive] = useState(true);
+const [active1, setActive1] = useState(true);
 const [images, setImages] = useState();
 const [open, setOpen] = useState(false);
 const scrollRef = useRef(null);
@@ -222,7 +222,7 @@ useEffect(() => {
         <div className="app-container">
 
       
-    <div className="app-left">
+        <div className= {`app-left${active1?"-hidden":" "}`}>
 
     
 <div className="app-left-header">
@@ -313,6 +313,7 @@ useEffect(() => {
           userData={userData}
           online={onlineCheck(item)}
           setActiveStatus={setActiveStatus}
+          setActive1={setActive1}
         />
       ))}
  
@@ -340,8 +341,8 @@ useEffect(() => {
           scrollRef={scrollRef}
           setMessages={setMessages}
           handleImageUpload={handleImageUpload}
-          active={active}
-          setActive={setActive}
+          active1={active1}
+          setActive1={setActive1}
         />
     {/* right*/}
 
@@ -438,6 +439,7 @@ const MessageList = ({
   setUserData,
   online,
   setActiveStatus,
+  setActive1
 }) => {
  
   const [user, setUser] = useState([]);
@@ -506,7 +508,8 @@ const MessageList = ({
         handleClick(data?._id) ||
         setCurrentChat(data) ||
         setUserData(user) ||
-        setActiveStatus(online)
+        setActiveStatus(online) ||
+        setActive1(true)
     }>
     <img
          src={`${user?.avatar}`}  alt="chat"
@@ -542,15 +545,15 @@ const SellerInbox = ({
   userData,
   activeStatus,
   handleImageUpload,
-  active,
-  setActive,
+  active1,
+  setActive1,
 }) => {
   return (
     <>
    <div className="app-main">
-   <div onClick={()=>setActive(!active)} className=" bg-black text-white w-[30px] h-[30px] rounded-full p-1 flex justify-center items-center">
+   <div onClick={()=>setActive1(!active1)} className="sm:hidden bg-black text-white w-[30px] h-[30px] rounded-full p-1 flex justify-center items-center">
       {
-        active ? (<AiOutlineArrowLeft size={24}/>) : (<AiOutlineArrowRight size={24}/>)
+        active1 ? (<AiOutlineArrowLeft size={24}/>) : (<AiOutlineArrowRight size={24}/>)
       }
     </div>
       <div className="chat-wrapper">
