@@ -595,7 +595,7 @@ const ProductDetails = ({ data }) => {
                     </div>
                   </div>
                   <div className="right-col">
-                    <h1 itemProp="name">{data?.name}</h1>
+                    <h1 itemProp="name" className=" text-xl sm:text-3xl ">{data?.name}</h1>
                     <div itemProp="offers" itemScope="">
                       <div className="price-shipping">
                         <div
@@ -725,7 +725,7 @@ const ProductDetails = ({ data }) => {
                               </span>
                             </div>
 
-                            <div className=" bg-blue-100  text-lg rounded w-[135px] flex justify-evenly  items-center ">
+                            <div className=" bg-gray-100  text-lg rounded w-[135px] flex justify-evenly  items-center ">
                               <span className="px-2">Qty.</span>
                               <span
                                 className=" text-2xl  h-full px-2  flex justify-center items-center cursor-pointer"
@@ -752,7 +752,7 @@ const ProductDetails = ({ data }) => {
                           </div>
                         </div>
                       </form>
-                      <div className="tabs border w-full h-full">
+                      <div className="tabs ">
                         <div className="tab-labels w-full h-full flex justify-center items-center">
                           <span
                             onClick={() => setActive(1)}
