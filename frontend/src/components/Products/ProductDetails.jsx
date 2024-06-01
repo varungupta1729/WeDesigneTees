@@ -586,9 +586,7 @@ console.log(data);
                           <div
                             className=""
                             style={{
-                              backgroundImage: ` url("${backend_url}${
-                                data && data.images[select]
-                              }")`,
+                              backgroundImage: ` url("${data?.images[select]?.url}")`,
                             }}
                           />
                         </div>
