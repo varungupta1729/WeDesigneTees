@@ -2720,7 +2720,7 @@
           position: absolute;
           text-align: center;
           width: 100%;
-          z-index: 100
+          z-index: 10;
       }
       .product-detail .left-col .thumbs a {
           border: 2px solid #e2e2e3;
