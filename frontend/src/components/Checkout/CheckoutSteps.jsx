@@ -17,7 +17,7 @@ const CheckoutSteps = ({active}) => {
                </div>
 
                <div className={`${styles.noramlFlex}`}>
-                <div className={`${active > 1 ? `bg-black w-[50px] h-[50px] rounded-full flex justify-center items-center` : `w-[50px] h-[50px] flex justify-center items-center rounded-full border-2 border-black border-solid !bg-[#ffffff]`}`}>
+                <div className={`${active > 1 ? `bg-black w-[50px] h-[50px] rounded-full flex justify-center items-center` : `  w-[50px] h-[50px] flex justify-center items-center rounded-full border-2 border-black border-solid !bg-[#ffffff]`}`}>
                     <span className={`${active > 1 ? `${styles.cart_button_text}` : `${styles.cart_button_text} !text-[#000000]`}`}>
                         2
                     </span>
