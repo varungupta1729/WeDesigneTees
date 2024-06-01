@@ -2745,22 +2745,27 @@
           display: none
       }
       .product-detail .left-col .big #banner-gallery {
+          height: 60vh;
           display: block;
           position: relative;
-          max-width: 1024px;
+          max-width: 77%;
           margin: 0 auto;
           border-top: 1px solid #c6c6c6;
           border-bottom: 1px solid #c6c6c6;
-          overflow: hidden
+          /* overflow: hidden */
       }
       .product-detail .left-col .big #banner-gallery .swipe {
-          overflow: hidden;
-          visibility: hidden;
-          position: relative
+          /* overflow: hidden; */
+          /* visibility: hidden; */
+          position: relative;
+          height: 100%;
+
       }
       .product-detail .left-col .big #banner-gallery .swipe-wrap {
-          overflow: hidden;
-          position: relative
+          /* overflow: hidden; */
+          position: relative;
+          height: 100%;
+
       }
       .product-detail .left-col .big #banner-gallery .swipe-wrap>div {
           background: transparent no-repeat center center;
@@ -2769,7 +2774,9 @@
           -webkit-background-size: cover;
           background-size: cover;
           float: left;
-          padding-bottom: 33%;
+          /* padding-bottom: 33%;
+           */
+          height: 100%;
           width: 100%;
           position: relative
       }
