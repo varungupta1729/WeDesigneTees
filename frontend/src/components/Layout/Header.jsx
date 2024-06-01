@@ -261,31 +261,29 @@ const Header = ({ activeHeading }) => {
                 <input
                   type="search"
                   placeholder="Search Product..."
-                  className="h-[40px] w-full px-4 border-[#000000] border-[2px] border-solid rounded-full outline-none text-gray-800"
+                  className="h-[40px] w-full px-4 border-[#000000]   rounded-full outline-none "
                   value={searchTerm}
                   onChange={searchHandle}
                 />
-                {searchData && (
+                {searchData && searchData.length !== 0 && searchTerm.length !== 0 ? (
                   <div className="absolute bg-[#fff] z-10 shadow w-full left-0 p-3">
-                    {searchData.map((i) => {
-                      const d = i.name;
-
-                      const Product_name = d.replace(/\s+/g, "-");
+                    {searchData.map((i , index) => {
+                      
                       return (
-                        <Link to={`/product/${Product_name}`}>
+                        <Link to={`/product/${i._id}`}>
                           <div className="flex items-center">
                             <img
-                              src={i.image_Url[0].url}
+                              src={i.images[0]?.url}
                               alt=""
                               className="w-[50px] mr-2"
                             />
-                            <h5>{i.name}</h5>
+                            <h5>{i?.name}</h5>
                           </div>
                         </Link>
                       );
                     })}
                   </div>
-                )}
+                ) : null}
               </div>
 
               {/* <Navbar active={activeHeading} /> */}
