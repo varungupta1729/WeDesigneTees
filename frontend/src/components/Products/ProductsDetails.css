@@ -1479,7 +1479,7 @@
       margin-top: 40px
   }
   .product-detail .btn-and-quantity {
-      float: left
+      /* float: left */
   }
   .product-detail #AddToCart {
       font-family: "montserratbold", sans-serif;
@@ -1500,9 +1500,9 @@
       padding: 14px 26px 14px 53px
   }
 
-  .product-detail .spinner {
+  /* .product-detail .spinner {
       float: right
-  }
+  } */
   
   .related {
       background-color: #f7f7fa;
@@ -1518,10 +1518,10 @@
       margin-top: 26px
   }
   .swatches .guide {
-      float: left;
-      margin: 36px 0 0 20px
+      /* float: left;
+      margin: 36px 0 0 20px */
   }
-  .spinner {
+  /* .spinner {
       -moz-border-radius: 25px;
       -webkit-border-radius: 25px;
       border-radius: 25px;
@@ -1530,12 +1530,12 @@
       margin-left: 10px;
       padding: 15px 16px 0;
       position: relative
-  }
+  } */
   .spinner.is-hidden {
       display: none
   }
  
-
+/* 
   .spinner span {
       font-family: "montserratlight", sans-serif;
       border: 0 none;
@@ -1545,19 +1545,19 @@
       font-size: 20px;
       height: 17px !important;
       line-height: 17px !important;
-      /* margin-left: 1px; */
+    
       padding-bottom: 0;
       padding-top: 0;
       text-align: right;
       width: 30px
-  }
-  .spinner .q {
+  } */
+  /* .spinner .q {
       font-size: 107.69231%;
       line-height: 121.42857%;
       display: block;
       float: left;
       margin: 1px 20px 0 3px
-  }
+  } */
   .tabs {
       margin: 30px 0
   }
@@ -1567,7 +1567,7 @@
       z-index: 100
   }
   .tabs .tab-labels span {
-      font-family: "montserratbold", sans-serif;
+      /* font-family: "montserratbold", sans-serif; */
       font-size: 100%;
       line-height: 123.07692%;
       -moz-border-radius: 1px;
@@ -1577,9 +1577,9 @@
       border-bottom: 0 none;
       color: #000000;
       cursor: pointer;
-      display: block;
+      /* display: block; */
       float: left;
-      padding: 10px 40px 9px;
+      padding: 10px 30px 9px;
       text-transform: uppercase
   }
   .tabs .tab-labels span.active {
@@ -2836,9 +2836,10 @@
           margin: 10px 0 30px
       }
       .product-detail .swatches .guide {
-          float: none;
-          margin: -25px 0 0;
-          text-align: center
+        
+          /* float: none; */
+          /* margin: -25px 0 0;
+          text-align: center */
       }
       .product-detail .swatch {
           float: none;
@@ -2850,10 +2851,10 @@
           float: none;
           margin: 7px 8px 25px 0
       }
-      .product-detail .btn-and-quantity {
+      /* .product-detail .btn-and-quantity {
           float: none;
           text-align: center
-      }
+      } */
       .product-detail .spinner {
           float: none;
           margin: 0 auto 10px;
@@ -3022,7 +3023,7 @@
       }
   }
   .swatches {
-      margin: 17px 0 80px
+      margin: 17px 0 30px
   }
   .selector-wrapper,
   #productSelect {
