@@ -5,6 +5,7 @@ import { CiHeart } from "react-icons/ci";
 import { CiSearch } from "react-icons/ci";
 import { Link, useNavigate } from "react-router-dom";
 import black from "../../Assets/images/black.png";
+import blacklogo from "../../Assets/images/black logo.png";
 // import { productData } from "../../static/data";
 import { useState } from "react";
 import { useSelector } from "react-redux";
@@ -71,7 +72,7 @@ const Header = ({ activeHeading }) => {
   };
 
   return (
-    <div className=" flex flex-row justify-between py-3 lg:px-20 border-2 bg-[#fff]  ">
+    <div className=" flex flex-row justify-between py-3 lg:px-20  bg-[#fff]  ">
       <div className="w-72 hidden 800px:block">
         <Link to={"/"}>
           <img src={black} alt="logo" />
@@ -194,7 +195,7 @@ const Header = ({ activeHeading }) => {
         className={`${
           active === true ? "mx-10 shadow-sm fixed top-0 left-0 z-10 " : null
         }
-           w-full h-[60px] bg-[#fff] z-50 top-0 left-0 shadow-sm 800px:hidden px-3`}
+           w-full h-[70px] bg-[#fff] z-50 top-0 left-0 shadow-sm 800px:hidden px-3`}
       >
         <div className="w-full flex items-center justify-between">
           <div>
@@ -207,9 +208,9 @@ const Header = ({ activeHeading }) => {
           <div>
             <Link to="/">
               <img
-                src={black}
+                src={blacklogo}
                 alt=""
-                className="mt-3 cursor-pointer w-[250px]"
+                className="mt-3 cursor-pointer w-[50px]"
               />
             </Link>
           </div>
@@ -234,7 +235,7 @@ const Header = ({ activeHeading }) => {
         {/* header sidebar */}
         {open && (
           <div
-            className={`fixed w-full bg-[#00000088] z-20 h-full top-0 left-0 `}
+            className={`fixed w-full bg-[#00000088] z-20 h-full top-0 left-0 overflow-y-auto`}
           >
             <div className="fixed w-[70%] bg-[#fff] h-screen top-0 left-0 z-10 overflow-y-scroll pb-10 ">
               <div className="w-full justify-between flex pr-3 ">
