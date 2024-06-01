@@ -4,8 +4,8 @@ import styles from '../../styles/styles'
 const CheckoutSteps = ({active}) => {
     console.log(active);
   return (
-    <div className='w-full flex justify-center'>
-        <div className="w-[90%] 800px:w-[50%] flex items-center flex-wrap">
+    <div className='w-full flex justify-center items-center '>
+        <div className="w-[90%] 800px:w-[50%] flex items-center  flex-wrap justify-center 800px:justify-start">
                <div className={`${styles.noramlFlex}`}>
                 <div className={`bg-black w-[50px] h-[50px] rounded-full flex justify-center items-center`}>
                        <span className={`${styles.cart_button_text}`}>1</span>
