@@ -127,7 +127,7 @@
     position: fixed;
     right: 10px;
     top: auto !important;
-    z-index: 1000; }
+    z-index: 10; }
   
   #quick-cart-pay {
     font-size: 100%;
@@ -263,7 +263,7 @@
     left: 0;
     position: absolute;
     top: 0;
-    z-index: 2000; }
+    z-index: 20; }
   
   .quick-cart-product.animated img {
     border-radius: 1px;
@@ -648,7 +648,7 @@
       padding: 15px;
       position: fixed;
       top: auto !important;
-      z-index: 99999
+      z-index: 9
   }
   body {
       /* font-family: "montserratlight", sans-serif; */
@@ -672,7 +672,7 @@
       font-size: 100%;
       line-height: 130.76923%;
       position: relative;
-      z-index: 1000
+      z-index: 10
   }
   header .header {
       -moz-box-shadow: rgba(17, 17, 18, 0.04) 0 2px 4px, rgba(19, 20, 20, 0.06) 0 1px 1px;
@@ -690,7 +690,7 @@
       letter-spacing: 4px;
       position: relative;
       text-transform: uppercase;
-      z-index: 100
+      z-index: 10
   }
   header nav {
       font-family: "montserratregular", sans-serif;
@@ -766,7 +766,7 @@
       text-transform: none;
       top: 28px;
       width: 662px;
-      z-index: 1000
+      z-index: 10
   }
 
   header nav>ul>li ul li {
@@ -936,7 +936,7 @@
       box-shadow: rgba(17, 17, 18, 0.04) 0 2px 4px, rgba(19, 20, 20, 0.06) 0 1px 1px;
       padding-bottom: 30px;
       position: relative;
-      z-index: 100
+      z-index: 10
   }
   .collection .products {
       background-color: #f7f7fa;
@@ -1056,7 +1056,7 @@
       position: absolute;
       right: 0;
       top: 26px;
-      z-index: 100
+      z-index: 10
   }
   .sorter .sorter-options>div {
       -moz-transition: all 0.3s ease-in-out;
@@ -1564,7 +1564,7 @@
   .tabs .tab-labels {
       position: relative;
       top: 1px;
-      z-index: 100
+      z-index: 10
   }
   .tabs .tab-labels span {
       /* font-family: "montserratbold", sans-serif; */
