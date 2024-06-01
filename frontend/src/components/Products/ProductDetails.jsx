@@ -511,11 +511,10 @@ const ProductDetails = ({ data }) => {
       toast.error("Please login to create a conversation");
     }
   };
-console.log(data);
+  console.log(data);
   return (
     <div>
       <>
-      
         <header role="banner" aria-label="Heading">
           <div
             className="breadcrumb"
@@ -530,7 +529,9 @@ console.log(data);
                   </Link>
                 </li>
                 <li>
-                <Link to={`/shop/preview/${data?.shop._id}`}  title="Shop">{data?.shop.name}</Link>
+                  <Link to={`/shop/preview/${data?.shop._id}`} title="Shop">
+                    {data?.shop.name}
+                  </Link>
                 </li>
                 <li>{data?.name}</li>
               </ol>
@@ -610,8 +611,10 @@ console.log(data);
                         </div>
                       </div>
 
-                      <div className="py-5">{data?.description}</div>
-                      <div className="swatches">
+                      <div className="py-5 text-center sm:text-left">
+                        {data?.description}
+                      </div>
+                      <div className="swatches ">
                         <div className="swatch clearfix" data-option-index={0}>
                           <div className="header">Size</div>
                           <div
@@ -692,69 +695,65 @@ console.log(data);
                             </label>
                           </div>
                         </div>
-
-                        <div className="guide ">
-                          <div>
-                            {click ? (
-                              <AiFillHeart
-                                size={30}
-                                className="cursor-pointer"
-                                onClick={() => removeFromWishlistHandler(data)}
-                                color={click ? "red" : "#333"}
-                                title="Remove from wishlist"
-                              />
-                            ) : (
-                              <AiOutlineHeart
-                                size={30}
-                                className="cursor-pointer"
-                                onClick={() => addToWishlistHandler(data)}
-                                color={click ? "red" : "#333"}
-                                title="Add to wishlist"
-                              />
-                            )}
-                          </div>
-                        </div>
                       </div>
+
                       {/* <form method="post" enctype="multipart/form-data" id="AddToCartForm"> */}
                       <form id="AddToCartForm">
-                        <div className="btn-and-quantity-wrap">
-                          <div className="btn-and-quantity ">
-                            <div className="spinner  ">
-                             
+                        <div className=" ">
+                          <div className=" flex  justify-center sm:justify-start  gap-7 mb-20">
+                            <div className=" ">
+                              <span>
+                                {click ? (
+                                  <AiFillHeart
+                                    size={30}
+                                    className="cursor-pointer"
+                                    onClick={() =>
+                                      removeFromWishlistHandler(data)
+                                    }
+                                    color={click ? "red" : "#333"}
+                                    title="Remove from wishlist"
+                                  />
+                                ) : (
+                                  <AiOutlineHeart
+                                    size={30}
+                                    className="cursor-pointer"
+                                    onClick={() => addToWishlistHandler(data)}
+                                    color={click ? "red" : "#333"}
+                                    title="Add to wishlist"
+                                  />
+                                )}
+                              </span>
+                            </div>
 
-                              
-
-                              <span className="q">Qty.</span>
-
-
-
+                            <div className=" bg-blue-100  text-lg rounded w-[135px] flex justify-evenly  items-center ">
+                              <span className="px-2">Qty.</span>
                               <span
-                                className="btn plus text-xl  cursor-pointer"
+                                className=" text-2xl  h-full px-2  flex justify-center items-center cursor-pointer"
                                 onClick={incrementCount}
                               >
                                 +
                               </span>
-                              <span className="text-xl">{count}</span>
+                              <span className="text-xl px-2 flex justify-center items-center ">{count}</span>
                               <span
-                                className="btn minus text-xl  cursor-pointer "
+                                className=" text-2xl  flex justify-center items-center  px-2 h-full cursor-pointer "
                                 onClick={decrementCount}
                               >
                                 -
                               </span>
                             </div>
                             <div
-                              id="AddToCart"
+                              // id="AddToCart"
                               quickbeam="add-to-cart"
-                              className="cursor-pointer"
+                              className="cursor-pointer bg-black flex justify-center items-center text-white py-2 px-5 w-[135px]"
                               onClick={() => addToCartHandler(data._id)}
                             >
-                              <span id="AddToCartText">Add to Cart</span>
+                              <span>Add to Cart</span>
                             </div>
                           </div>
                         </div>
                       </form>
-                      <div className="tabs">
-                        <div className="tab-labels">
+                      <div className="tabs border w-full h-full">
+                        <div className="tab-labels w-full h-full flex justify-center items-center">
                           <span
                             onClick={() => setActive(1)}
                             className={active === 1 ? "active" : ""}
@@ -787,7 +786,7 @@ console.log(data);
                                   data.reviews.map((item, index) => (
                                     <div className="w-full flex my-2">
                                       <img
-                                      src={`${item.user.avatar}`}
+                                        src={`${item.user.avatar}`}
                                         alt=""
                                         className="w-[40px] h-[40px] rounded-full"
                                       />
@@ -817,7 +816,7 @@ console.log(data);
                                   <Link to={`/shop/preview/${data.shop._id}`}>
                                     <div className="flex items-center">
                                       <img
-                                       src={`${data?.shop?.avatar?.url}`}
+                                        src={`${data?.shop?.avatar?.url}`}
                                         className="w-[50px] h-[50px] rounded-full"
                                         alt=""
                                       />
@@ -875,15 +874,12 @@ console.log(data);
                           </div>
                         </div>
                       </div>
-                      <div className="social-sharing-btn-wrapper">
-                        <span id="social_sharing_btn">Share</span>
-                      </div>
+                     
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-           
           </div>
         </section>
 
