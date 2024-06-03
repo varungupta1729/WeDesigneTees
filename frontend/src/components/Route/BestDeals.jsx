@@ -4,9 +4,15 @@ import { useState } from 'react'
 // import { productData } from '../../static/data';
 import ProductCardBestDeals from './ProductCard/ProductCardBestDeals.jsx'
 import { useSelector } from 'react-redux';
+import './BestDeal.css'
 
 
 const BestDeals = () => {
+
+  var divStyle = {
+    
+   
+  }
   const [data, setData] = useState([]);
   const { allProducts } = useSelector((state) => state.products);
   useEffect(() => {
@@ -16,11 +22,11 @@ const BestDeals = () => {
     setData(firstFive);
   }, [allProducts]);
   return (
-    <div>
+    <div className='flex justify-center items-center flex-col'>
     
 
     <div className='text-3xl py-7 text-center font-medium'>Best Deals</div>
-    <div className='  w-full  scroll-smooth snap-x snap-mandatory flex justify-center items-center '>
+    <div  className=' scrollbar-hidden w-[90%] overflow-y-scroll scroll scroll-smooth snap-x snap-mandatory flex justify-center items-center '>
         {
           data && data.length !== 0 && data.map((i , index)=>{
               return  (
