@@ -8,12 +8,12 @@ import {
 const SliderSection = () => {
   return (
     <div className='w-full p-4 lg:p-24'>
-      <div className='bg-white rounded-[40px] p-4 lg:px-24 lg:py-10 text-black flex gao-10 flex-col lg:flex-row text-center lg:text-left justify-center items-center' >
-        <div className='w-[100%] lg:w-[50%]  flex flex-col gap-10 p-10'>
+      <div className='bg-white rounded-[40px] p-2 lg:px-24 lg:py-10 text-black flex gao-10 flex-col lg:flex-row text-center lg:text-left justify-center items-center' >
+        <div className='w-[100%] lg:w-[50%]  flex flex-col gap-10 p-5 lg:p-10'>
       <h2 className='customise'>Customize Now</h2>
         
-          <p className='text-[4rem]  font-extrabold'>Customize</p>
-          <p className=' text-[3rem]   leading-10 font-extrabold text-gray-600 '>
+          <p className='text-[3rem] lg:text-[4rem]  font-extrabold'>Customize</p>
+          <p className='text-[2rem] lg:text-[3rem]   leading-10 font-extrabold text-gray-600 '>
           Your  Tshirt Now
           </p>
           <p className=' text-[1.3rem] leading-8 capitalize'>Now you can order your customized tshirt at WeDesigneTees with 20% Off</p>
