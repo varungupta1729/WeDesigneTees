@@ -20,7 +20,7 @@ const Home = () => {
       <Header activeHeading={1}/>
       <Navbar/>
       <Hero />
-      <Categories/>
+      {/* <Categories/> */}
       <BestDeals/>
       <FeatureProduct/>
       {/* <Events/> */}
