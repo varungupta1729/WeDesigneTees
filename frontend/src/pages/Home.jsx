@@ -10,6 +10,7 @@ import Sponsored from "../components/Route/Sponsored.jsx";
 import Footer from "../components/Layout/Footer.jsx";
 
 
+import SliderSection from "../components/SliderSection/SliderSection.jsx";
 
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
       <FeatureProduct/>
       {/* <Events/> */}
       {/* <Sponsored/> */}
+      <SliderSection/>
       <Footer/>
 
     </div>
