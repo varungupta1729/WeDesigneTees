@@ -34,7 +34,7 @@ const Hero = () => {
       </span>
      
       </div>
-
+{/* 
         <div
           className="w-full h-full bg-white flex justify-evenly items-center"
           style={{}}
@@ -58,9 +58,9 @@ const Hero = () => {
                 </Link>
               </div>
             </span>
-          </div>
+          </div> */}
 
-          <div   className="w-[50%] h-full flex flex-col justify-center items-center">
+          {/* <div   className="w-[50%] h-full flex flex-col justify-center items-center">
             <ReactCompareSlider
             className="h-[70%]  rounded-lg bg-slate-100 "
               itemOne={
@@ -78,8 +78,14 @@ const Hero = () => {
                 />
               }
             />
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
+        <div className="flex h-full items-center justify-center bg-red-400 dark:bg-gray-700 dark:text-white bg-no-repeat bg-cover"  style={{
+        backgroundImage:
+          "url(https://res.cloudinary.com/decvwqui4/image/upload/v1717466194/fxvn7wag5jtqspdzwpoa.png)",
+      }}>
+      
+      </div>
 
       
      
@@ -111,49 +117,12 @@ const Hero = () => {
       </span>
      
       </div>
-
-        <div
-          className="w-full h-full bg-white flex justify-evenly items-center"
-          style={{}}
-        >
-          <div className="w-[50%] h-full flex flex-col justify-center items-center ">
-            <span className="text-left gap-2 flex flex-col mx-10">
-              <div className="text-lg font-bold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.purple.400),theme(colors.purple.100),theme(colors.pink.300),theme(colors.orange.400),theme(colors.pink.300),theme(colors.purple.100),theme(colors.purple.400))] bg-[length:200%_auto] animate-gradient">
-                GET YOUR CUSTOM TSHIRT NOW!
-              </div>
-              <div className="text-sm capitalize">
-                Contact for the custom tshirt
-              </div>
-              <div className="text-xs capitalize">
-                Now available in all colors with 20% discount
-              </div>
-             
-            </span>
-          </div>
-
-          <div   className="w-[50%] h-full flex flex-col justify-center items-center">
-            <ReactCompareSlider
-            className="h-[70%]  rounded-lg bg-slate-100 "
-              itemOne={
-                <ReactCompareSliderImage
-                  src="https://res.cloudinary.com/decvwqui4/image/upload/v1717183954/jryml1qnb8xm4zfkpmyp.png"
-                  srcSet="https://res.cloudinary.com/decvwqui4/image/upload/v1717187623/js9jhbh0lctbbcgwmiff.png"
-                  alt="Image one"
-                />
-              }
-              itemTwo={
-                <ReactCompareSliderImage
-                  src="https://res.cloudinary.com/decvwqui4/image/upload/v1717185400/azoyu8vknqf5jxlwhbst.png"
-                  srcSet="https://res.cloudinary.com/decvwqui4/image/upload/v1717187620/rhgl36vinkhhia7erevy.png"
-                  alt="Image two"
-                />
-              }
-            />
-          </div>
-        </div>
-
+      <div className="flex h-full items-center justify-center bg-red-400 dark:bg-gray-700 dark:text-white bg-no-repeat bg-cover"  style={{
+        backgroundImage:
+          "url(https://res.cloudinary.com/decvwqui4/image/upload/v1717466194/fxvn7wag5jtqspdzwpoa.png)",
+      }}>
       
-     
+      </div>
       </Carousel>
     </div>
     </>
