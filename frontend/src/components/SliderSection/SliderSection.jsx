@@ -8,7 +8,7 @@ import {
 const SliderSection = () => {
   return (
     <div className='w-full p-4 lg:p-24'>
-      <div className='bg-white rounded-[40px] p-2 lg:px-24 lg:py-10 text-black flex gao-10 flex-col lg:flex-row text-center lg:text-left justify-center items-center' >
+      <div className='bg-white rounded-[40px] p-2 lg:px-24 lg:py-10 text-black flex gap-10 flex-col lg:flex-row text-center lg:text-left justify-center items-center' >
         <div className='w-[100%] lg:w-[50%]  flex flex-col gap-10 p-5 lg:p-10'>
       <h2 className='customise'>Customize Now</h2>
         
