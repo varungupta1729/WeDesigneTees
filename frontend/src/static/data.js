@@ -10,11 +10,7 @@ export const navItems = [
     },
     {
       title: "Design",
-      url: "https://wedesignetshirts.netlify.app/",
-    },
-    {
-      title: "Events",
-      url: "/events",
+      url: "https://wedesigneteescustome.vercel.app/",
     },
     {
       title: "Hire Designer",
@@ -261,7 +257,7 @@ export const navItems = [
       link: "/about"
     },
     {
-      name: "Become a Designer",
+      name: "Register As Shop",
       link: "/create-shop"
     },
     {
