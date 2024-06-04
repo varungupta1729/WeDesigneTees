@@ -20,10 +20,16 @@ const ShopDashboardPage = () => {
   };
 
   const logoutHandler = async () => {
-    axios.get(`${server}/shop/logout`, {
-      withCredentials: true,
-    });
-    window.location.reload();
+    try {
+      await axios.get(`${server}/shop/logout`, {
+        withCredentials: true,
+      });
+      window.location.reload();
+      
+    } catch (error) {
+      toast.error(error)
+    }
+   
   };
 
   return (
