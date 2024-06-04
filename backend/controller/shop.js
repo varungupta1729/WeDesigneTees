@@ -175,6 +175,7 @@ router.get(
   );
   
   // log out from shop
+  // log out from shop
   router.get(
     "/logout",
     catchAsyncErrors(async (req, res, next) => {
