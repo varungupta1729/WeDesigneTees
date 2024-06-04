@@ -195,7 +195,7 @@ export const navItems = [
   export const categoriesData = [
     {
       id: 1,
-      title: "All",
+      title: "Polo Tshirt",
       subTitle: "",
       image_Url:
         "https://m.media-amazon.com/images/I/71GITfTSeRL._UY550_.jpg",
@@ -241,12 +241,7 @@ export const navItems = [
       subTitle: "",
       image_Url: "https://www.oowia.com/wp-content/uploads/2022/03/oowia-bodycon-dress-aop.jpg",
     },
-    {
-      id: 8,
-      title: "Polo Tshirt",
-      subTitle: "",
-      image_Url: "https://www.oowia.com/wp-content/uploads/2022/03/oowia-bodycon-dress-aop.jpg",
-    },
+  
    
   
   ];
