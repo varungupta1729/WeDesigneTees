@@ -138,6 +138,8 @@ router.get('/logout' , isAuthenticated , catchAsyncErrors(async(req , res ,next)
     res.cookie("token" , null  ,{
       expires: new Date(Date.now()),
       httpOnly:true,
+      sameSite: "none",
+      secure: true,
     })
 
     res.status(201).json({

@@ -183,6 +183,8 @@ router.get(
         res.cookie("seller_token", null, {
           expires: new Date(Date.now()),
           httpOnly: true,
+          sameSite: "none",
+      secure: true,
         });
         console.log("bhadia")
         res.status(201).json({
