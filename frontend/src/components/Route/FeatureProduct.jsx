@@ -11,7 +11,7 @@ const FeatureProduct = () => {
   const [active, setActive] = useState(false);
   const { allProducts } = useSelector((state) => state.products);
   const [activeProducts, setActiveProducts] = useState(allProducts);
-  const [loading , setLoading] = useState(false);
+ 
   
 
   useEffect(()=>{
@@ -24,6 +24,7 @@ const FeatureProduct = () => {
    
 
     setActiveProducts(elements);
+   
   };
 
   const priceFilter = (e) => {
@@ -73,13 +74,17 @@ const FeatureProduct = () => {
     
     if (e.target.checked) {
       var categoryClicked = e.target.parentElement.textContent;
-     
-      
+       if(categoryClicked === 'All'){
+        transferData(allProducts);
+       }else{
         transferData(
           allProducts.filter(
             (item) => item.category === categoryClicked
           )
         );
+       }
+      
+       
     
     } else {
      

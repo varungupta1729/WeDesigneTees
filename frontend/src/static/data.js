@@ -195,53 +195,60 @@ export const navItems = [
   export const categoriesData = [
     {
       id: 1,
+      title: "All",
+      subTitle: "",
+      image_Url: "https://www.oowia.com/wp-content/uploads/2022/03/oowia-bodycon-dress-aop.jpg",
+    },
+   
+    {
+      id: 2,
       title: "Polo Tshirt",
       subTitle: "",
       image_Url:
         "https://m.media-amazon.com/images/I/71GITfTSeRL._UY550_.jpg",
     },
     {
-      id: 2,
+      id: 3,
       title: "V-Neck",
       subTitle: "",
       image_Url:
         "https://m.media-amazon.com/images/I/6161odHZb+L._AC_UX522_.jpg",
     },
     {
-      id: 3,
+      id: 4,
       title: "Y-Neck",
       subTitle: "",
       image_Url:
         "https://resources.mandmdirect.com/Images/_default/j/j/3/jj30555_1_large.jpg",
     },
     {
-      id: 4,
+      id: 5,
       title: "Sleeveless",
       subTitle: "",
       image_Url:
         "https://www.oowia.com/wp-content/uploads/2020/12/aop-joggers-men-oowia.jpg",
     },
     {
-      id: 5,
+      id: 6,
       title: "Oversized Tshirts",
       subTitle: "",
       image_Url:
         "https://m.media-amazon.com/images/I/51HeuoUgK0L._UY500_.jpg",
     },
     {
-      id: 6,
+      id: 7,
       title: "Full Sleeve Tshirt",
       subTitle: "",
       image_Url:
         "https://www.oowia.com/wp-content/uploads/2021/05/crop-top-600x900.jpg.webp",
     },
     {
-      id: 7,
+      id: 8,
       title: "Standard Tshirt",
       subTitle: "",
       image_Url: "https://www.oowia.com/wp-content/uploads/2022/03/oowia-bodycon-dress-aop.jpg",
     },
-  
+   
    
   
   ];
@@ -254,7 +261,7 @@ export const navItems = [
       link: "/about"
     },
     {
-      name: "Register Shop",
+      name: "Become a Designer",
       link: "/create-shop"
     },
     {
