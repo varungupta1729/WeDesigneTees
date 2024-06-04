@@ -184,11 +184,13 @@ router.get(
           expires: new Date(Date.now()),
           httpOnly: true,
         });
+        console.log("bhadia")
         res.status(201).json({
           success: true,
           message: "Log out successful!",
         });
       } catch (error) {
+        console.log("not Bhadia")
         return next(new ErrorHandler(error.message, 500));
       }
     })
