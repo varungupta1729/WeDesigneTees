@@ -5,17 +5,14 @@ const router = express.Router();
 const Product = require("../model/product");
 const Order = require("../model/order");
 const Shop = require("../model/shop");
-// const { upload } = require("../multer");
-const ErrorHandler = require("../utils/ErrorHandler");
-const fs = require("fs");
 const cloudinary = require("cloudinary");
+const ErrorHandler = require("../utils/ErrorHandler");
 
 // create product
 router.post(
   "/create-product",
   catchAsyncErrors(async (req, res, next) => {
     try {
-      console.log(req.body)
       const shopId = req.body.shopId;
       const shop = await Shop.findById(shopId);
       if (!shop) {
@@ -54,19 +51,18 @@ router.post(
         });
       }
     } catch (error) {
-      console.log(error)
       return next(new ErrorHandler(error, 400));
     }
   })
 );
+
 // get all products of a shop
 router.get(
   "/get-all-products-shop/:id",
   catchAsyncErrors(async (req, res, next) => {
     try {
-      // console.log(req.params.id)
       const products = await Product.find({ shopId: req.params.id });
-    // console.log(products)
+
       res.status(201).json({
         success: true,
         products,
@@ -88,20 +84,23 @@ router.delete(
       if (!product) {
         return next(new ErrorHandler("Product is not found with this id", 404));
       }    
-
-      for (let i = 0; 1 < product.images.length; i++) {
+   
+      for (let i = 0; i < product.images.length; i++) {
+        
         const result = await cloudinary.v2.uploader.destroy(
           product.images[i].public_id
+         
         );
       }
     
-      await product.remove();
+     await Product.findByIdAndDelete(req.params.id);
 
       res.status(201).json({
         success: true,
         message: "Product Deleted successfully!",
       });
     } catch (error) {
+      console.log(error)
       return next(new ErrorHandler(error, 400));
     }
   })
