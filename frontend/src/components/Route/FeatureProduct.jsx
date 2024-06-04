@@ -183,10 +183,10 @@ console.log(activeProducts)
             active ? "w-[70%]" : " w-[100%] "
           } flex flex-col justify-center mt-10 right-div relative items-center`}
         >
-          <div className={` absolute flex justify-end top-[-2.5rem] right-10`}>
+          <div className={` absolute flex justify-end top-[-3.5rem] right-10`}>
             <button
               onClick={() => setActive(!active)}
-              className="bg-black text-white flex justify-center items-center gap-2  py-2 px-5"
+              className="bg-black rounded-full text-white flex justify-center items-center gap-2  py-2 px-5"
             >
               Filter <FaFilter />
             </button>
