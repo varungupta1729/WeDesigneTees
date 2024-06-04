@@ -17,7 +17,7 @@ const SliderSection = () => {
           Your  Tshirt Now
           </p>
           <p className=' text-[1.3rem] leading-8 capitalize'>Now you can order your customized tshirt at WeDesigneTees with 20% Off</p>
-          <Link to={'https://form.jotform.com/232427706509458'}><button className='bg-black text-white px-5 py-3 text-sm font-semibold '>Order Now</button></Link>
+          <Link to={'https://wedesigneteescustome.vercel.app/'}><button className='bg-black text-white px-5 py-3 text-sm font-semibold '>Order Now</button></Link>
         </div>
         <div className="w-full lg:w-[50%] h-full flex flex-col justify-center items-center">
             <ReactCompareSlider
