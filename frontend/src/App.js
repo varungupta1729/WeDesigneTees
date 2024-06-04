@@ -42,6 +42,7 @@ import axios from "axios";
 import { server } from "./server.js";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
+import BestSellingPage from "./pages/BestSellingPage.jsx";
 // import AddProduct from './components/Dashboard/AddProduct.jsx'
 
 const App = () => {
@@ -156,7 +157,7 @@ const App = () => {
             </ProtectiveRoute>
           }
         />
-
+ <Route path="/best-selling" element={<BestSellingPage />} />
                 <Route path='/dashboard-messages' element={<ShopInboxPage/>}/>
                 <Route path="/inbox" element={<UserInbox/>}/>
                 {/* <Route path='/inbox?:id' element={<UserInboxPage/>}/> */}
