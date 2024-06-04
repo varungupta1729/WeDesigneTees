@@ -19,7 +19,7 @@ const FeatureProduct = () => {
       </div>
       <div className="w-full relative  flex justify-center  ">
         {active && (
-          <div className="w-[25%]  rounded-[20px] mx-10 side-div flex flex-col gap-7 z-10 py-10 px-14 bg-white">
+          <div className="w-[25%] h-[100%] height-div rounded-[20px] mx-10 side-div flex flex-col gap-7 z-10 py-10 px-14 bg-white">
 
             <div className="w-full ">
               <div className="w-full flex flex-col gap-3">
