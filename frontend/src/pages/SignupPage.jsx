@@ -54,7 +54,7 @@ const SignupPage = () => {
 
     const result = apiResponse.json();
 
-    console.log(result);
+    // console.log(result);
   }
 
   useEffect(() => {

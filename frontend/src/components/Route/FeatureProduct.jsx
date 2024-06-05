@@ -38,7 +38,7 @@ const FeatureProduct = () => {
         
         transferData(
           allProducts.filter(
-            (item) => item?.discountPrice < part2 && item?.discountPrice > part1
+            (item) => item?.discountPrice <= part2 && item?.discountPrice > part1
           )
         );
       } else {
