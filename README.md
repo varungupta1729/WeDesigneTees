@@ -1,17 +1,16 @@
-# Project Title
+# WeDesigneTees 
 
-WeDesigneTees 
+
 
 ## Demo Video
 
-[![Demo Video](https://link_to_your_image.png)](https://www.youtube.com/watch?v=your_video_id)
+[![Demo Video](https://github.com/varungupta1729/WeDesigneTees/blob/main/Screenshot%202024-06-07%20114704.png?raw=true)](https://youtu.be/vxWTz7_SAVI)
 
 ## Getting Started
 This repository aims to assist you in beginning work on a MERN stack application with a solid file structure as a foundation. To get started make a copy of this template repo for your project teams.
 
 Since this project will hold both the client application and the server application there will be node modules in two different places. First run `npm install` from the root. After this you will run `npm run-script install-all` from the root. From now on run this command anytime you want to install all modules again. This is a script we have defined in package.json .
 
-This app can be deployed directly to heroku since there is a script defined in package.json which will automatically handle building and deploying the app. For more information on deploying to heroku reference the extra resources at the bottom of this file. 
 
 ## File structure
 #### `client` - Holds the client application
@@ -69,8 +68,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn how to setup a local MongoDB instance for testing, check out how to [Connect to MongoDB](https://docs.mongodb.com/guides/server/drivers/).
-
-To learn how to deploy a full-stack web app to heroku, check out [this great guide](https://daveceddia.com/deploy-react-express-app-heroku/).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
