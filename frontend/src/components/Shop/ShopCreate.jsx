@@ -36,12 +36,22 @@ const ShopCreate = () => {
         password,
         confirmPassword,
         avatar,
-        zipCode,
         address,
         phoneNumber,
+        zipCode,
       })
       .then((res) => {
-       
+        console.log(
+         {
+            name,
+            email,
+            password,
+            confirmPassword,
+            avatar,
+            zipCode,
+            address,
+            phoneNumber,
+          });
         toast.success(res.data.message);
         setName("");
         setEmail("");

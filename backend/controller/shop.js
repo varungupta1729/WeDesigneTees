@@ -40,10 +40,11 @@ router.post("/create-shop", async (req, res, next) => {
         phoneNumber: req.body.phoneNumber,
         zipCode: req.body.zipCode,
       };
-  
+      console.log(seller);
       const activationToken = createActivationToken(seller);
   
       const activationUrl = `https://we-designe-tees.vercel.app/shop/activation/${activationToken}`;
+      // const activationUrl = `http://localhost:3000/shop/activation/${activationToken}`;
   
       try {
         await sendMail({
@@ -91,7 +92,7 @@ router.post("/create-shop", async (req, res, next) => {
         if (!newSeller) {
           return next(new ErrorHandler("Invalid token", 400));
         }
-        const { name, email, password, avatar, zipCode, address, phoneNumber } =
+        const { name, email, password, avatar,  address, phoneNumber ,zipCode } =
           newSeller;
   
         let seller = await Shop.findOne({ email });
@@ -105,9 +106,9 @@ router.post("/create-shop", async (req, res, next) => {
           email,
           avatar,
           password,
-          zipCode,
           address,
           phoneNumber,
+          zipCode,
         });
   
         sendShopToken(seller, 201, res);
